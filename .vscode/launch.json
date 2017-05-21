@@ -2,15 +2,51 @@
     // Use IntelliSense to learn about possible Node.js debug attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    /**
+    *  一些内置的常量
+    ${workspaceRoot}  当前在vscode打开文件的根目录
+    ${workspaceRootFolderName} 不带下划线的当前vscode打开的文件夹
+    ${file} -   当前打开的文件
+    ${relativeFile} - 相对于vscode打开的文件
+    ${fileBasename} - 当前打开的文件的类型名 php txt
+    ${fileBasenameNoExtension} -当前打开的文件没带任何扩展名 不带 .txt 
+    ${fileDirname} - 当前打开的文件的目录名
+    ${fileExtname} - the current opened file's extension
+    ${cwd} - the task runner's current working directory on startup
+    ${lineNumber} 当前打开文件选择行数的行号
+    */
     "version": "0.2.0",
     "configurations": [
         {
-            //debug的模式
+            //debug的模式 类似的也可以有 php go
             "type": "node",
+            //有俩种模式 launch  attach
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceRoot}\\index.js",
+            //在执行测试之前执行一个task任务
+            "preLaunchTask": null,
+            //控制调试面板输出的可见性
+            "internalConsoleOptions": "openOnSessionStart",
+            "name": "node 测试",
+            // "debugServer": 4711,
+            //当启动调试的时候需要运行的可执行程序或文件
+        
+            "program":"${file}",
+            //传递给调试执行程序的参数
+            "args": [
+                
+            ],
+            //环境变量
+            "env": {
+                
+            },
+            //当前工作的目录，用于发现依赖和其他文件
             "cwd": "${workspaceRoot}",
+            //运行程序的端口
+            "port": 5858,
+            //在程序运行结束之后，就把
+            "stopOnEntry": true,
+            //使用什么类型的控制台
+            "console": "internalConsole"
         },
         {
             "type": "node",

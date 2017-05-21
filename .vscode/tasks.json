@@ -2,22 +2,27 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "npm",
+    "command": "echo",
     "isShellCommand": true,
     "showOutput": "always",
-    "suppressTaskName": true,
+    "suppressTaskName": true, 
+    //把命令给输出
+    "echoCommand": true,
+    "args": [],
     "tasks": [
         {
-            "taskName": "install",
-            "args": ["install"]
+                "taskName": "hello",
+                "args": [
+                    "hello world"
+                ],
+                //将会把任务名也输出
+                "suppressTaskName": true
         },
         {
-            "taskName": "update",
-            "args": ["update"]
-        },
-        {
-            "taskName": "test",
-            "args": ["run", "test"]
+            "taskName": "bye",
+            "args": [
+                "Good bye"
+            ]
         }
     ]
 }

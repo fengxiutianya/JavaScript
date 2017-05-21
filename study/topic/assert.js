@@ -37,3 +37,4 @@ function test2()
     // assert.deepEqual(obj2,obj1);
 }
 test2();
+console.log(12);
