@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+         //确定编译的类型
+        "module": "System",
+        //警告在声明的时候用any类型
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        //输出成单一的文件
+        // "outFile": "./common.js",
+        "outDir": "src/",
+        "rootDir": "study/",
+        "sourceMap": false,
+        //是否允许js文件被编译
+         "allowJs": false,
+        "target": "es6"
+        
+    },
+    //指定编译的具体文件
+    // "files": [
+        
+    //指定编译的目录
+    // 可以是一个通配符  * 陪陪o个合伙多个字符 不包括目录分隔符 ? 匹配一个任意字符 **/递归匹配热议子目录
+    //默认匹配的只有 .ts .tsx .d.ts 结尾的文件  
+    "include": [
+        "study/**/*"   
+    ],
+    "exclude": [
+        "node_modules",
+        ".vscode",
+        "note"
+    ]
+}
