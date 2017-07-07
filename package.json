@@ -1,0 +1,22 @@
+{
+  "name": "modulestudy",
+  "version": "1.0.0",
+  "description": "用于学习js的模块规范",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxiutianya/nodejs.git"
+  },
+  "author": "zhangke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengxiutianya/nodejs/issues"
+  },
+  "homepage": "https://github.com/fengxiutianya/nodejs#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
